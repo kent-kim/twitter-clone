@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app'
 import {SessionProvider} from "next-auth/react"
 import {RecoilRoot} from "recoil"
 
-function MyApp({ Component, pageProps:{session,...pageProps} }: AppProps) {
+function MyApp({ Component, pageProps:{session,...pageProps} }: any) {
   console.log(session)
   return (
   <SessionProvider session={session}>
